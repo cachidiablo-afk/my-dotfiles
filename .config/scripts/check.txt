@@ -1,0 +1,1 @@
+cachidi+   22282   22269  2 23:01 ?        00:00:00 ffmpeg -f pulse -ac 2 -ar 48000 -i alsa_output.pci-0000_07_00.6.analog-stereo.monitor -f mp3 /home/cachidiablo/Audio/2021.11/audio_211125230115.mp3
