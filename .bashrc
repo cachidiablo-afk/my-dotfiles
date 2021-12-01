@@ -69,7 +69,7 @@ export PS1="${bold}${green}${title}${bold}${blue}\w ${bold}${cyan}\$(git_branch)
 
 
 # Aliases
-alias die='shutdown -P now'
+alias die='shutdown -h now'
 alias new='reboot'
 alias u='sudo pacman -Syu'
 alias c='clear'
