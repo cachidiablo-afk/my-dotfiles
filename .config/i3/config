@@ -354,6 +354,7 @@ for_window [class="discord"] move to workspace $ws3
 for_window [class="qBittorrent"] move to workspace $ws9
 for_window [class="mpv"] move to workspace $ws7
 for_window [class="Gimp"] move to workspace $ws8
+#for_window [class="okular"]
 
 
 #for_window [class="Spotify"] fullscreen enable
@@ -384,8 +385,8 @@ bindsym XF86AudioNext exec playerctl next -p spotify
 bindsym XF86AudioPrev exec playerctl previous -p spotify
 
 #gaps config
-gaps outer 8
-gaps inner 10
+gaps outer 7
+gaps inner 7
 #smart_gaps on
 hide_edge_borders smart
 

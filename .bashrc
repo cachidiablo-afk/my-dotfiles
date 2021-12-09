@@ -1,29 +1,5 @@
 #
 # ~/.bashrc
-#
-#message
-
-#if [[ $DISPLAY ]]; then
-#    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#    exec tmux attach
-#    fi
-#fi
-
-#now=$(date +"%r")
-#echo "Hey ${USER}, the time is $now"
-#/usr/bin/neofetch
-#echo "Have a nice day!"
-#echo ""
-
-#function clear {
-#now=$(date +"%r")
-#/usr/bin/clear     
-#echo "Hey ${USER}, the time is $now"
-#/usr/bin/neofetch
-#echo "Have a nice day!"
-#echo ""
-#}
-
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -56,36 +32,31 @@ git_branch() {
 # Clear attributes
 clear_attributes="\[$(tput sgr0)\]"
 
-# Custom bash prompt - "➜  ~ (master) "
+# Custom bash prompt
 export PS1="${bold}${green}${title}${bold}${blue}\w ${bold}${cyan}\$(git_branch)${clear_attributes}${white}"
-
-#green color for normal users
-#PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
-
-# indian red -> prompt
-#PS1='\[\e[0;1;38;5;203m\][\[\e[0;1;38;5;203m\]\u\[\e[0;1;38;5;203m\]@\[\e[0;1;38;5;203m\]\h \[\e[0;1;38;5;32m\]\W\[\e[0;1;38;5;203m\]]\[\e[0;1;38;5;203m\]$ \[\e[0m\]'  
-# dracula
-#PS1='\[\e[0;38;5;212m\][\[\e[0;38;5;212m\]\u\[\e[0;38;5;212m\]@\[\e[0;38;5;212m\]\h \[\e[0;38;5;139m\]\w\[\e[0;38;5;212m\]]\[\e[0;38;5;212m\]$ \[\e[0m\]'
-
 
 # Aliases
 alias die='shutdown -h now'
 alias new='reboot'
-alias u='sudo pacman -Syu'
+alias flex='neofetch' 
+alias v='nvim'
 alias c='clear'
 alias e='exit'
-alias v='nvim'
-alias sv='sudo nvim'
+alias t='tmux new -s project'
+
+# Pacman aliases
+alias u='sudo pacman -Syu'
 alias i='sudo pacman -S'
 alias yeet='sudo pacman -Rns'
-alias flex='neofetch' 
-alias t='tmux new -s project'
+alias orphans='pacman -Qtdq'
+alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+
+# Config aliases
 alias i3edit='nvim ~/.config/i3/config'
 alias polyedit='nvim ~/.config/polybar/config'
 alias picomedit='nvim ~/.config/picom/picom.conf'
 alias dunstedit='nvim ~/.config/dunst/dunstrc'
 alias bedit='nvim ~/.bashrc'
-alias bloqfix='xmodmap .Xmodmap'
 alias flexedit='nvim ~/.config/neofetch/config.conf'
 
 # Where should I put you?
