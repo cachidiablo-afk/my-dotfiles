@@ -4,10 +4,6 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-
-# Xmodmap
-xmodmap ~/.Xmodmap
-
 # Modules for multiple keyboard layouts
 
 export GTK_IM_MODULE='fcitx'
