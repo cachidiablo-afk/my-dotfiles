@@ -380,7 +380,6 @@ exec fcitx -d  &
 
 # Media player key bindings (need media-sound/playerctl for playerctl.)
 bindsym XF86AudioPlay exec playerctl play-pause -p spotify
-#bindsym XF86AudioPause exec playerctl pause -p spotify
 bindsym XF86AudioNext exec playerctl next -p spotify
 bindsym XF86AudioPrev exec playerctl previous -p spotify
 
@@ -401,9 +400,6 @@ for_window [title="Picture-in-Picture"] sticky enable
 
 #grab audio
 bindsym F3 exec /home/cachidiablo/.config/scripts/audio
-
-#grab audio sinco
-#bindsym $mod+F3 exec /home/cachidiablo/.config/scripts/audio2/audio2
 
 #flameshot
 bindsym Print exec flameshot gui
