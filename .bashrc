@@ -59,5 +59,22 @@ alias dunstedit='nvim ~/.config/dunst/dunstrc'
 alias bedit='nvim ~/.bashrc'
 alias flexedit='nvim ~/.config/neofetch/config.conf'
 
+# Git aliases
+alias g="git"
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gl='git pull'
+alias gp='git push'
+alias gr="git rebase"
+alias glo="git log --pretty=oneline --graph --decorate --all"
+
+
+
 # Where should I put you?
 bind -x '"\C-g": . ~/.config/scripts/tmux-sessionizer.sh'
